@@ -4,17 +4,43 @@ namespace IsUnique
 {
     class Program
     {
+        // Method 1: Brute force Looping
+
+        // static bool uniqueCharacters(string inputString)
+        // {
+        //     for (int firstIndex = 0; firstIndex < inputString.Length; firstIndex++)
+        //     {
+        //         for (int secondIndex = firstIndex + 1; secondIndex < inputString.Length; secondIndex++)
+        //         {
+        //             if (inputString[firstIndex] == inputString[secondIndex])
+        //             {
+        //                 return false;
+        //             }
+        //         }
+        //     }
+        //     return true;
+        // }
+
+        // Method 2: Sorting based on ASCII values of characters
+        // Time Complexity: O(n log n)
+
         static bool uniqueCharacters(string inputString)
         {
-            for (int firstIndex = 0; firstIndex < inputString.Length; firstIndex++)
+            char[] characterArray = inputString.ToCharArray();
+
+            Array.Sort(characterArray);
+
+            for (int index = 0; index < characterArray.Length - 1; index++)
             {
-                for (int secondIndex = firstIndex + 1; secondIndex < inputString.Length; secondIndex++)
+                if (characterArray[index] != characterArray[index + 1])
                 {
-                    if (inputString[firstIndex] == inputString[secondIndex])
-                    {
-                        return false;
-                    }
+                    continue;
                 }
+                else
+                {
+                    return false;
+                }
+
             }
             return true;
         }
