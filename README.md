@@ -23,3 +23,13 @@
   > > > return false
 
   > return true if none match
+
+## Method 2
+
+- Time complexity is O(n log n)
+
+- Convert the string to a character array
+- sort the character array by ascii value
+- Loop through all of the characters in the sorted array and compare it to the next indexed value
+- if any match return false
+- otherwise return true
