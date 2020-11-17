@@ -20,4 +20,5 @@
   > >
   > > > if (inputString[firstIndex] == firstString[lastIndex])
   > > > return false
-  > > > return true if none match
+
+return true if none match
