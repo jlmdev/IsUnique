@@ -14,8 +14,10 @@
 - D: Input: string
   Output: bool
 - A: Nested Loop
-  Loop through all of the characters 0-inputString.Length
-  Loop through all of the characters until the last after the firstIndex
-  if (inputString[firstIndex] == firstString[lastIndex])
-  return false
-  return true if none match
+  > Loop through all of the characters 0-inputString.Length
+  >
+  > > Loop through all of the characters until the last after the firstIndex
+  > >
+  > > > if (inputString[firstIndex] == firstString[lastIndex])
+  > > > return false
+  > > > return true if none match
